@@ -2,7 +2,6 @@ flask
 gunicorn
 pandas
 scikit-learn
-# Add any other dependencies you use, e.g.:
-# numpy
-# matplotlib
-# seaborn
+numpy
+matplotlib
+seaborn
