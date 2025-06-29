@@ -10,7 +10,7 @@ import numpy as np
 import seaborn as sns
 import itertools
 import os
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -220,6 +220,10 @@ pred_df = pd.DataFrame(rows)
 pred_df.to_json('dashboard_predictions_2026_2027.json', orient='records', indent=2)
 
 print("Exported dashboard_predictions_2016_2017.json and dashboard_predictions_2026_2027.json")
+
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 if __name__ == '__main__':
     # Local development
