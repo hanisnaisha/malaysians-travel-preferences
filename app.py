@@ -15,7 +15,7 @@ from flask import Flask
 app = Flask(__name__)
 
 # Load your data
-df = pd.read_csv('travelling-companion-cleaned.csv')
+df = pd.read_csv('static/travelling-companion-cleaned.csv')
 
 # Top 5 countries
 top5 = df['Country'].value_counts().nlargest(5).index.tolist()
