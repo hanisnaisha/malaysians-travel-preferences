@@ -1,0 +1,33 @@
+[
+  {
+    "Companion": "ALONE",
+    "Year": 2026,
+    "Continent": "Asia",
+    "Predicted": "Singapore"
+  },
+  {
+    "Companion": "WITH FAMILY/RELATIVES",
+    "Year": 2026,
+    "Continent": "Asia",
+    "Predicted": "Thailand"
+  },
+  {
+    "Companion": "WITH SPOUSE",
+    "Year": 2026,
+    "Continent": "Europe",
+    "Predicted": "France"
+  },
+  {
+    "Companion": "ALONE",
+    "Year": 2027,
+    "Continent": "Asia",
+    "Predicted": "Japan"
+  },
+  {
+    "Companion": "WITH FRIENDS",
+    "Year": 2027,
+    "Continent": "Oceania",
+    "Predicted": "Australia"
+  }
+  
+]

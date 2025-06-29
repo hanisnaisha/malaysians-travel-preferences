@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysians' Travel Preferences 2016-2017</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/yarkone/echarts-world/world.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    #predictions-table-container table tr:hover {
+        background: #f1f1f1 !important;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <header>
+                <h1>Malaysians' Travel Preferences</h1>
+                <div class="controls">
+                    <label for="year-select">Select Year:</label>
+                    <select id="year-select">
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="both">Both</option>
+                    </select>
+                    <label for="companion-select">Companion:</label>
+                    <select id="companion-select">
+                        <option value="All">All</option>
+                        <option value="ALONE">Alone</option>
+                        <option value="WITH SPOUSE">With Spouse</option>
+                        <option value="WITH CHILDREN">With Children</option>
+                        <option value="WITH FAMILY/RELATIVES">With Family/Relatives</option>
+                        <option value="STUDENT GROUP">Student Group</option>
+                        <option value="WITH FRIENDS">With Friends</option>
+                        <option value="WITH BUSINESS ASSOCIATE">With Business Associate</option>
+                        <option value="WITH INCENTIVE GROUP">Incentive Group</option>
+                        <option value="OTHERS">Others</option>
+                    </select>
+                </div>
+            </header>
+
+            <div class="chart-container">
+                <h2>Malaysian Traveller Distribution by Country</h2>
+                <div id="popular-destinations-chart" class="chart"></div>
+            </div>
+
+            <div class="additional-charts">
+                <div class="chart-container">
+                    <h2>Travel Companion Preference</h2>
+                    <div class="companion-trends-flex">
+                        <div id="companion-donut-chart" class="chart"></div>
+                        <div id="companion-legend"></div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h2>Country Popularity Trend</h2>
+                    <div class="controls">
+                        <label for="destination-country-select">Select Country:</label>
+                        <select id="destination-country-select"></select>
+                    </div>
+                    <div id="destination-trends-chart" class="chart"></div>
+                </div>
+            </div>
+        </main>
+        <div class="chart-container" id="radar-chart-container">
+            <h2>Continent Preference Radar Chart</h2>
+            <div id="radar-chart" class="chart"></div>
+        </div>
+        <section class="chart-container" id="continent-bar-charts-container" style="margin-top:2.5rem;">
+            <h2>Most & Least Preferred Countries by Continent</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+                <div style="height:220px;flex:1;min-width:220px;" id="bar-chart-asia"></div>
+                <div style="height:220px;flex:1;min-width:220px;" id="bar-chart-europe"></div>
+                <div style="height:220px;flex:1;min-width:220px;" id="bar-chart-oceania"></div>
+                <div style="height:220px;flex:1;min-width:220px;" id="bar-chart-north-america"></div>
+            </div>
+        </section>
+        <section class="chart-container" id="historical-predictions-section" style="margin-top:2.5rem;">
+            <h2>Travel Behavior Predictions (2016–2017, Actual vs. Predicted)</h2>
+            <div id="historical-predictions-table-container"></div>
+        </section>
+        <section class="chart-container" id="future-predictions-section" style="margin-top:2.5rem;">
+            <h2>Predicted Travel Behavior for 2026–2027</h2>
+            <div id="future-predictions-table-container"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

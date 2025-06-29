@@ -1,0 +1,58 @@
+[
+  {
+    "Companion": "ALONE",
+    "Year": 2016,
+    "Continent": "Asia",
+    "Actual": "Singapore",
+    "Predicted": "Singapore"
+  },
+  {
+    "Companion": "WITH FAMILY/RELATIVES",
+    "Year": 2016,
+    "Continent": "Asia",
+    "Actual": "Thailand",
+    "Predicted": "Thailand"
+  },
+  {
+    "Companion": "WITH SPOUSE",
+    "Year": 2016,
+    "Continent": "Europe",
+    "Actual": "France",
+    "Predicted": "France"
+  },
+  {
+    "Companion": "ALONE",
+    "Year": 2017,
+    "Continent": "Asia",
+    "Actual": "Japan",
+    "Predicted": "Japan"
+  },
+  {
+    "Companion": "WITH FRIENDS",
+    "Year": 2017,
+    "Continent": "Oceania",
+    "Actual": "Australia",
+    "Predicted": "Australia"
+  },
+  {
+    "Companion": "WITH SPOUSE",
+    "Year": 2017,
+    "Continent": "Europe",
+    "Actual": "Italy",
+    "Predicted": "France"
+  },
+  {
+    "Companion": "WITH BUSINESS ASSOCIATE",
+    "Year": 2016,
+    "Continent": "Asia",
+    "Actual": "China",
+    "Predicted": "Japan"
+  },
+  {
+    "Companion": "WITH INCENTIVE GROUP",
+    "Year": 2017,
+    "Continent": "Asia",
+    "Actual": "South Korea",
+    "Predicted": "Japan"
+  }
+]

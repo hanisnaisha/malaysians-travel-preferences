@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #0f0c29;
+    --primary-color: #24243e;
+    --secondary-color: #302b63;
+    --accent-color: #00c6ff;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+}
+
+.main-content {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.controls label {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    display: block;
+}
+
+select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+select option {
+    background: var(--primary-color);
+}
+
+.chart-container {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.chart-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+}
+
+.additional-charts {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.additional-charts .chart-container {
+    flex: 1;
+    min-width: 0;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    box-sizing: border-box;
+}
+
+#destination-country-select {
+    width: 100%;
+    background-color: #1b203d;
+    color: #fff;
+    border: 1px solid #4d4d7a;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+    min-height: unset;
+}
+
+.custom-legend {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 1rem;
+}
+
+.custom-legend li {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.legend-color-swatch {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.legend-label-text {
+    color: #fff;
+    font-size: 0.6rem;
+}
+
+.companion-trends-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+#companion-donut-chart {
+    width: 240px;
+    height: 240px;
+    min-width: 150px;
+    min-height: 150px;
+}
+
+#companion-legend {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#destination-trends-chart {
+    width: 100%;
+    height: 250px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#radar-chart-container {
+    margin-top: 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 198, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 20px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    max-width: 900px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#radar-chart {
+    width: 100%;
+    height: 350px;
+    min-height: 250px;
+    max-width: 800px;
+} 
