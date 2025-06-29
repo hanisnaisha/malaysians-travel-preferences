@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let longFormatData = [];
 
-    const DATA_PATH = 'travelling-companion-cleaned.csv';
+    const DATA_PATH = '/static/travelling-companion-cleaned.csv';
 
     function loadData() {
         try {
@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderPredictionsTable() {
-        fetch('dashboard_predictions.json')
+        fetch('/static/dashboard_predictions_2016_2017.json')
             .then(response => response.json())
             .then(data => {
                 // Limit to first 20 rows for display
@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderHistoricalPredictionsTable() {
-        fetch('dashboard_predictions_2016_2017.json')
+        fetch('/static/dashboard_predictions_2016_2017.json')
             .then(response => response.json())
             .then(data => {
                 const rows = data.slice(0, 30); // Show first 30 for brevity
@@ -477,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderFuturePredictionsTable() {
-        fetch('dashboard_predictions_2026_2027.json')
+        fetch('/static/dashboard_predictions_2026_2027.json')
             .then(response => response.json())
             .then(data => {
                 const rows = data.slice(0, 30); // Show first 30 for brevity

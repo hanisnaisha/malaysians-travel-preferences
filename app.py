@@ -10,7 +10,7 @@ import numpy as np
 import seaborn as sns
 import itertools
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -225,10 +225,11 @@ print("Exported dashboard_predictions_2016_2017.json and dashboard_predictions_2
 def home():
     return render_template("index.html")
 
-if __name__ == '__main__':
-    # Local development
-    app.run(debug=True, host='127.0.0.1', port=5000)
-else:
-    # Production (when imported by Gunicorn)
-    app.config['ENV'] = 'production'
-    app.config['DEBUG'] = False
+@app.route('/data')
+def data():
+    # your data loading logic
+    return jsonify(your_data)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host="0.0.0.0", port=port)
