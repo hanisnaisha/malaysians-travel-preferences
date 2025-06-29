@@ -179,7 +179,12 @@ df_2016_2017 = df[df['Year'].isin([2016, 2017])].copy()
 df_2016_2017['Companion_enc'] = le_companion.transform(df_2016_2017['Travelling Companion'])
 df_2016_2017['Continent_enc'] = le_continent.transform(df_2016_2017['Continent'])
 X_hist = df_2016_2017[['Companion_enc', 'Year', 'Continent_enc']]
+
+# Fit the encoder with all unique countries in your dataset
+le_country_grouped.fit(df_2016_2017['Country'].unique())
+# Now transform
 y_hist = le_country_grouped.transform(df_2016_2017['Country'])
+
 y_pred_hist = rf_model.predict(X_hist)
 
 df_2016_2017['Companion'] = df_2016_2017['Travelling Companion']
